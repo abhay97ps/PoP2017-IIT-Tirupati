@@ -1,0 +1,21 @@
+import Glibc
+//generic stack and queue adt implementaion
+//for empty array case _.isEmpty syntax can be used to avoide errors
+class Stack<T>{
+    var stack = [T]()
+    func push(value: T){
+        stack.append(value)
+    }
+    func pop()->T{
+            return stack.removeLast() 
+    }
+}
+class Queue<T>{
+    var queue=[T]()
+    func enque(value: T){
+        queue.append(value)
+    }
+    func deque()->T{
+        return queue.remove(at: 0)
+    }
+}
